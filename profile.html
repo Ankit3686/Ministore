@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — MiniStore</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="ministore.css">
+
+    <!-- JS -->
+    <script src="profile.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <div id="header">
+
+        <div id="logo">MiniStore.</div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="nav" id="nav">
+
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="index.html#services" class="nav-link">SERVICE</a>
+            <a href="index.html#products" class="nav-link">PRODUCTS</a>
+            <a href="index.html#watch" class="nav-link">WATCHES</a>
+            <a href="index.html#sale" class="nav-link">SALE</a>
+            <a href="index.html#blog" class="nav-link">BLOG</a>
+
+            <div class="dropdown">
+                <a href="#">PAGES ▾</a>
+
+                <div class="dropdown-content">
+                    <a href="about.html">ABOUT US</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="shop.html">SHOP</a>
+                    <a href="cart.html">CART</a>
+                    <a href="checkout.html">CHECKOUT</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="orders.html">ORDERS</a>
+                </div>
+            </div>
+
+            <a href="admin.html" id="adminLink" style="display:none;">ADMIN</a>
+
+        </div>
+
+        <div class="icons">
+            <a href="shop.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+            <a href="profile.html" id="username"></a>
+        </div>
+
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="about-hero">
+        <div class="about-hero-text">
+            <h1>PROFILE</h1>
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Profile</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROFILE ===== -->
+    <section class="profile-page">
+
+        <div class="profile-card">
+
+            <div class="profile-header">
+
+                <div class="profile-img">
+                    <!-- ✅ FIXED PATH -->
+                    <img id="profileImage" alt="Profile">
+                </div>
+
+                <label for="imageUpload" class="upload-btn">
+                    <i class="fa-solid fa-camera"></i> Change Photo
+                </label>
+
+                <!-- ✅ FIXED INPUT (NO HEIC) -->
+                <input type="file" id="imageUpload" accept="image/png, image/jpeg" hidden>
+
+                <h2 id="profileName"></h2>
+                <p class="profile-status">MiniStore Customer</p>
+
+            </div>
+
+            <div class="profile-info">
+
+                <div class="profile-row">
+                    <span>Email</span>
+                    <span id="profileEmail"></span>
+                </div>
+
+                <div class="profile-row">
+                    <span>Account Type</span>
+                    <span id="accountType"></span>
+                </div>
+
+            </div>
+
+            <div class="profile-actions">
+
+                <a href="cart.html" class="profile-btn">My Cart</a>
+                <a href="orders.html" class="profile-btn">Orders</a>
+
+                <button onclick="logout()" class="profile-btn logout">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== SUBSCRIBE ===== -->
+    <div class="container1">
+        <div class="subscribe-section">
+
+            <div class="subscribe-overlay">
+
+                <div class="subscribe-content">
+
+                    <div class="subscribe-text">
+                        <h3>SUBSCRIBE NOW</h3>
+                        <p>Get latest updates about our newest products and offers.</p>
+                    </div>
+
+                    <div class="subscribe-form">
+                        <input id="emailid"type="email" placeholder="Enter your email address">
+                        <button>Subscribe</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== INSTAGRAM ===== -->
+    <div class="container1">
+        <section class="insta-section">
+
+            <h1>SHOP OUR INSTA</h1>
+
+            <div class="insta-row">
+
+                <div class="insta-card">
+                    <div class="insta-img">
+                        <img src="product-item1.jpg">
+                    </div>
+                </div>
+
+                <div class="insta-card">
+                    <div class="insta-img">
+                        <img src="product-item7.jpg">
+                    </div>
+                </div>
+
+                <div class="insta-card">
+                    <div class="insta-img">
+                        <img src="product-item9.jpg">
+                    </div>
+                </div>
+
+                <div class="insta-card">
+                    <div class="insta-img">
+                        <img src="product-item3.jpg">
+                    </div>
+                </div>
+
+                <div class="insta-card">
+                    <div class="insta-img">
+                        <img src="product-item8.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+
+        <div class="container1">
+            <div class="footer-row">
+
+                <div class="footer-col">
+                    <h2 class="footer-logo">MiniStore.</h2>
+                    <p>Smart shopping experience with latest gadgets and trends.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>CONTACT</h3>
+                    <p>Email: kumar22102001ankit@gmail.com</p>
+                    <p>Phone: +91 7807465416</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 MiniStore. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

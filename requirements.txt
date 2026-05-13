@@ -1,0 +1,8 @@
+Flask
+flask-cors
+gunicorn
+psycopg2-binary
+bcrypt
+Werkzeug
+python-dotenv
+cloudinary
