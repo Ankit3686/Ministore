@@ -2,7 +2,7 @@
 const BASE_URL =
     ["localhost", "127.0.0.1"].includes(window.location.hostname)
         ? "http://localhost:5000"
-        : "https://ministore-phdo.onrender.com"; // 👈 deploy ke baad change karna
+        : "https://ministore-1.onrender.com"; // 👈 deploy ke baad change karna
 
 // ===== NAV MENU =====
 function toggleMenu() {
